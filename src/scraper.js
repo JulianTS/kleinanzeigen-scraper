@@ -1,3 +1,4 @@
+// @flow
 const rp = require('request-promise');
 const cheerio = require('cheerio');
 const Table = require('cli-table');
@@ -14,12 +15,13 @@ const options = {
     }
 };
 
-function push(title, price){
+function push(title, price, link){
 
     notifier.notify(
         {
             title: 'Neue Anzeige!',
             message: title + "\n" + price,
+            open: link,
             sound: true, // Only Notification Center or Windows Toasters
         },
         function(err, response) {
@@ -48,7 +50,7 @@ function getFirstAd() {
                 console.log(description);
                 console.log(link);
 
-                push(title, price);
+                push(title, price, link);
             }
 
         })
