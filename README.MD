@@ -1,3 +1,3 @@
 # Web Scraper für Ebay Kleinanzeigen
 
-bin ich krass, junge
+This Web Scraper is a newsticker for ebay Kleinanzeigen that gives you a notification when a new add pops up.
